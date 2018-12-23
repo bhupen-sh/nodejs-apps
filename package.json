@@ -1,0 +1,16 @@
+{
+  "name": "phone-diary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "phone-access.js",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bhupen",
+  "license": "ISC"
+}
