@@ -9,9 +9,9 @@ const config={
 	password:"",
 	database:"nbr_collection"
 }
+
 //configuring connection
 var con=mysql.createConnection(config);
-
 
 //connection with mysql 
 con.connect((err)=> {
