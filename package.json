@@ -4,6 +4,8 @@
   "description": "",
   "main": "phone-access.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "mongodb": "^3.1.10",
     "mongoose": "^5.4.0",
     "mysql": "^2.16.0",
