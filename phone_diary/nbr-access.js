@@ -1,8 +1,13 @@
 
+var express=require('express');
+var bodyparser=require('body-parser');
 
 
+
+var app=express();
+app.use(bodyparser.json());
 //.....inserting data into database-------
-var insertData=(con,name,nbr)=>{
+/*var insertData=(con,name,nbr)=>{
 	sql="INSERT INTO mobile_nbrs (name,nbr) VALUES ?";
 	var values=[
 	[name,nbr]
@@ -12,7 +17,26 @@ var insertData=(con,name,nbr)=>{
 		console.log("inserted "+ name);
 	});
 
+}*/
+
+var insertData = (con) =>{
+     app.post('/mobile_nbrs',(req,res)=>{
+     	sql="INSERT INTO mobile_nbrs (name,nbr) VALUES = ?";
+        var name=req.body.name;
+        var nbr=req.body.nbr;
+     	var values=[
+     	[name,nbr]
+     	];
+     	con.query(sql,[values],(err,result)=>{
+             if(err) throw err;
+             console.log("inserted "+name);
+     	});
+     });
 }
+
+  app.listen(3000,()=>{
+   console.log("running on port 3000")
+});
 
 
 //----------deleting data from database--------....

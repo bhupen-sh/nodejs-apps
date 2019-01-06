@@ -17,7 +17,7 @@ sequelize.authenticate().then((err)=>{
 	if(err) throw err;
 });
 
-
+vim +PluginInstalli--===
 const Student=sequelize.define('students',{
 	std_name:{
 	    type:Sequelize.STRING

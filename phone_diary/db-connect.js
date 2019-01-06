@@ -3,6 +3,7 @@ const argv=require('yargs').argv;
 var command=argv._[0];
 const nbrAccess=require('./nbr-access.js');
 
+//configuring database
 const config={
 	host:"localhost",
 	user:"root",
@@ -21,7 +22,7 @@ con.connect((err)=> {
 
 //-------inserting request-------
  if(command==='insert'){
- 	nbrAccess.insertData(con,argv.name,argv.nbr);
+ 	nbrAccess.insertData(con);
  }
 
 //------deleting request------------
